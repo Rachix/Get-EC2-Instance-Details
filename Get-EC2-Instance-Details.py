@@ -14,7 +14,7 @@ def lambda_handler(event, context):
         instance_details = i["Instances"][0]
         if instance_details["State"]["Name"].lower() in ["shutting-down","stopped","stopping","terminated"]:
             print("Instance ID: ", instance_details["InstanceId"])
-            print("Instance State: ", instance_details["State"]["Name"].lower())
+            print("Instance Current State: ", instance_details["State"]["Name"].lower())
             print("Instance Launch Time: ", instance_details["LaunchTime"])
             print("Instance Stop Time: ",  re.findall("\((.*?) *\)", instance_details["StateTransitionReason"]),)
             print("Instance State Change Reason: ", instance_details["StateTransitionReason"])
