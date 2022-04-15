@@ -1,2 +1,2 @@
-# itautomation
+# ITAutomation
 Code for IT Automation
