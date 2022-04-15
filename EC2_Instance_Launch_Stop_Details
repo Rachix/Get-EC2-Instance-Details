@@ -8,7 +8,7 @@ def lambda_handler(event, context):
     # Get the information about all the instances
     status = client.describe_instances()
     print(status)
-    print("*" * 10)
+    print("-" * 30)
 
     for i in status["Reservations"]:
         instance_details = i["Instances"][0]
