@@ -5,9 +5,8 @@ import re
 def lambda_handler(event, context):
     client = boto3.client("ec2")
 
-    # fetch information about all the instances
+    # Get the information about all the instances
     status = client.describe_instances()
-    
     print(status)
     print("*" * 10)
 
